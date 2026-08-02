@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base {
+  :root {
+    --bg-primary: #0F1115;
+    --bg-secondary: #171A21;
+    --bg-card: #1D212B;
+    --accent-primary: #8FAE5D;
+    --accent-secondary: #A7C97D;
+    --text-primary: #F5F5F5;
+    --text-secondary: #B8BDC8;
+    --border-color: #2A303F;
+  }
+
+  body {
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F1115;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1D212B;
+  border-radius: 9999px;
+  border: 2px solid #0F1115;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8FAE5D;
+}
+
+/* Clean Card Utils with Subtle Hover Lift */
+.card-craft {
+  background-color: #1D212B;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-craft:hover {
+  transform: translateY(-3px);
+  border-color: rgba(143, 174, 93, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px 0 rgba(143, 174, 93, 0.05);
+}
+
+/* Subtle Gradient text utility */
+.text-olive-gradient {
+  background: linear-gradient(135deg, #8FAE5D 0%, #A7C97D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
